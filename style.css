@@ -1,0 +1,86 @@
+body {
+    background-image: url(bg.jpg);    
+    overflow: hidden;
+}
+
+div.sw {
+    position: absolute;
+    top: 300px;
+    left: 50vw;
+    transform: scale(100);
+    animation: star 10s ease-out both;
+}
+
+div {
+    width: 600px;
+    position: absolute;
+    color: rgb(255, 255, 64);
+    perspective: 300px;
+    perspective-origin: bottom;
+    top: 0;
+    left: 25vw;
+    bottom: 0;
+    right: 0;
+    transform: scale(100%);
+    /* overflow: visible; */
+    transform: scaleY(0.9);
+}
+
+p {
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+section {
+    position: absolute;
+    top: 0;
+    left: 13%;
+    right: 13%;
+    height: 100%;
+    transform: translateY(0); 
+    animation: sw 30s ease-in both;
+    /* animation-delay: 5s; */
+}
+
+
+
+@keyframes sw {
+    0% {
+        transform: translate3d(0, 50rem, 0) rotateX(30deg);
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate3d(0, -100rem, 0) rotateX(-5deg);
+        opacity: 0;
+
+    }
+}
+
+@keyframes star {
+    0% {
+        top: 50vh;
+        left: 60vw;
+      opacity: 0;
+      transform: scale(4) translate(0.5em,-0.2em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 0;
+      top: 30vh;
+        left: 22vw;
+      transform: translateZ(-100em) scale(0);
+    }
+  }
